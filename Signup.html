@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/signup.css" />
+    <title>SignUp</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo">
+        <img src="/Group 5.png" alt="" />
+      </div>
+    </div>
+    <div class="section1">
+      <div class="car">
+        <img src="/Group 4038.png" alt="" />
+      </div>
+      <div class="form">
+        <div class="heading">Register your account!</div>
+        <div class="para">
+          We invite you to join the GasApp community! Create and verify your
+          profile to get fuel credit for your vehicle!
+        </div>
+        <input
+          type="text"
+          placeholder="First Name"
+          id="fstName"
+          name="fstName"
+          required
+          class="texts"
+        />
+        <input
+          type="text"
+          placeholder="Last name"
+          id="lstName"
+          name="lstName"
+          class="texts"
+          required
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          id="mail"
+          name="mail"
+          required
+        />
+        <div class="section2" >
+          <input
+            type="password"
+            placeholder="Password"
+            id="pswrd"
+            name="pswrd"
+            required
+            class="passwords"
+          />
+          <span
+            class="toggle-password"
+            id="togglePswrd"
+            onclick="togglePasswordVisibility('pswrd', 'togglePswrd')"
+          ></span>
+        </div>
+
+        <div class="section2">
+          <input
+            type="password"
+            placeholder="Re-type"
+            id="rePswrd"
+            name="rePswrd"
+            class="passwords"
+            required
+          />
+          <span
+            class="toggle-password"
+            id="toggleRePswrd"
+            onclick="togglePasswordVisibility('rePswrd', 'toggleRePswrd')"
+          ></span>
+        </div>
+
+        <button class="account">Create account</button>
+      </div>
+    </div>
+    <a href="/index.html"><button class="login">Log in</button></a>
+
+    <script>
+      let isPasswordVisible = {
+        pswrd: false, // State for the first password field
+        rePswrd: false, // State for the re-type password field
+      };
+
+      function togglePasswordVisibility(inputId, toggleId) {
+        const passwordInput = document.getElementById(inputId); // Get the input field
+        const eyeIcon = document.getElementById(toggleId); // Get the associated eye icon
+
+        // Toggle the password visibility
+        if (isPasswordVisible[inputId]) {
+          // Hide the password
+          passwordInput.type = "password"; // Set to password type
+          eyeIcon.style.backgroundImage = "url('/danger.png')"; // Default icon (hidden)
+         
+        } else {
+          // Show the password
+          passwordInput.type = "text"; // Set to text type
+          eyeIcon.style.backgroundImage = "url('/eye.png')"; // Visible (eye) icon
+          eyeIcon.style.backgroundSize = "18px 15px"; // Adjust the icon size
+        }
+
+        // Update the visibility state
+        isPasswordVisible[inputId] = !isPasswordVisible[inputId];
+      }
+    </script>
+  </body>
+</html>

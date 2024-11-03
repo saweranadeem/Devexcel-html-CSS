@@ -1,0 +1,358 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  gap: 880px;
+  position: relative;
+  top: 30px;
+  align-items: center;
+}
+.header button {
+  border: 1px solid #2e2e2e;
+  border-radius: 35px;
+  padding: 10px 25px;
+  color: #2e2e2e;
+  background-color: white;
+  font-family: Ubuntu;
+  font-size: 14px;
+  font-weight: bold;
+}
+.header button:hover {
+  cursor: pointer;
+  background-color: #cb1c1f;
+  color: white;
+  border: none;
+}
+.section1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section1 img {
+  width: 714px;
+  height: 503px;
+  position: relative;
+  top: 125px;
+  left: -210px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.section1 .head {
+  font-family: Ubuntu;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 40px;
+  text-align: left;
+  width: 416px;
+  height: 80px;
+}
+.section1 span {
+  color: #cb1c1f;
+}
+.section1 input {
+  width: 416px;
+  height: 40px;
+  border: 0.5px solid #b0b0b0;
+  border-radius: 5px;
+  padding-left: 32px;
+}
+
+::placeholder {
+  color: #b0b0b0;
+}
+.section1 input[type="email"]:focus {
+  border: 1px solid #cb1c1f;
+}
+.section1 input[type="email"] {
+  background-image: url("/email.png");
+  background-position: 13px 13px;
+  background-repeat: no-repeat;
+  background-size: 12px;
+  outline: none;
+}
+/* .section1 input[type="password"] {
+  background-image: url("/lock.png") ;
+  background-position: 13px 9px;
+  /* 390px 50%; */
+/* background-repeat: no-repeat;
+  background-size: 12px;
+  outline: none;
+} */
+.section1 {
+  position: relative;
+}
+
+.section1 input[type="password"],
+.section1 input[type="text"] {
+  background-image: url("/lock.png"); /* Default is 'eye' icon */
+  background-position: 13px 9px;
+  background-repeat: no-repeat;
+  background-size: 12px;
+  outline: none; /* Space for the eye icon */
+}
+.section2 {
+  position: relative;
+}
+.section2 .toggle-password {
+  position: absolute;
+  right: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 15px;
+  background-image: url("/danger.png"); /* Default is 'eye' icon */
+  background-size: cover;
+  cursor: pointer;
+  transition: background-image 0.3s ease; /* Smooth transition */
+}
+
+.section1 input[type="password"]:focus {
+  border: 1px solid #cb1c1f;
+}
+
+.section1 button {
+  background: #cb1c1f;
+  border: none;
+  color: white;
+  width: 416px;
+  height: 40px;
+  border-radius: 45px;
+  font-family: Ubuntu;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.09px;
+  text-align: center;
+}
+.section1 button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #2e2e2e;
+  border: 1px solid black;
+}
+.section1 .frgtp {
+  font-family: Ubuntu;
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;
+  width: 144px;
+  height: 18px;
+  position: relative;
+  left: 36%;
+}
+.section1 .frgtp:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: none;
+    position: relative;
+    top: 50px;
+  }
+  .header button {
+    padding: 10px 30px;
+    font-size: 13px;
+    font-weight: bold;
+  }
+  .section1 img {
+    display: none;
+  }
+  .section1 .head {
+    font-size: 20px;
+    width: 300px;
+    height: 40px;
+    font-weight: 900;
+    text-align: center;
+  }
+  .section1 {
+    gap: unset;
+    position: relative;
+    top: 60px;
+  }
+
+  .section1 input {
+    width: 100%;
+  }
+
+  .section1 button {
+    margin-left: 18px;
+    width: 90%;
+  }
+  .section1 .frgtp {
+    font-size: 17px;
+    left: 30%;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: unset;
+    margin: unset;
+    position: relative;
+    top: 20px;
+  }
+  /* .section1 input[type="password"] {
+    background-position: 13px 9px, 271px 13px;
+  } */
+  .section2 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 228px;
+  }
+  .section1 img {
+    display: none;
+  }
+
+  .header button {
+    padding: 14px 18px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .section1 {
+    gap: unset;
+  }
+  .section1 .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 80px;
+  }
+  .section1 .head {
+    font-size: 30px;
+    line-height: 30px;
+    width: 600px;
+    height: 50px;
+    text-align: center;
+  }
+  .section1 input {
+    width: 60%;
+  }
+  .section1 button {
+    width: 40%;
+  }
+  .section1 .frgtp {
+    font-size: 20px;
+    left: 1%;
+  }
+  /* .section1 input[type="password"] {
+    background-position: 13px 9px, 330px 13px;
+  } */
+  .section2 {
+    width: 60%;
+  }
+  .section1 input[type="password"] {
+    width: 100%;
+  }
+  .section2 .toggle-password {
+    right: 13px;
+    top: 50%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 510px;
+  }
+  .section1 img {
+    display: none;
+  }
+  .section1 {
+    gap: unset;
+  }
+  .section1 .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 80px;
+  }
+  .section1 .head {
+    font-size: 37px;
+    line-height: 30px;
+    width: 600px;
+    height: 50px;
+    text-align: center;
+  }
+
+  input {
+    width: 70%;
+  }
+  .section1 button {
+    width: 50%;
+  }
+  .section1 .frgtp {
+    font-size: 20px;
+    left: 2%;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .header {
+    display: flex;
+    justify-content: center;
+    gap: 500px;
+    align-items: center;
+  }
+  .section1 img {
+    display: none;
+  }
+  .section1 {
+    gap: unset;
+  }
+  .section1 .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    top: 100px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 310px;
+  }
+  .section1 {
+    gap: unset;
+  }
+  .section1 img {
+    width: 800px;
+    height: 500px;
+    position: relative;
+    top: 381px;
+    left: -672px;
+  }
+
+  .form {
+    position: relative;
+    top: 166px;
+    gap: 30px;
+  }
+}

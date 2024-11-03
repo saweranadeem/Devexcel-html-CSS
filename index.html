@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cards</title>
+    <link rel="stylesheet" href="/index.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo">
+        <img src="/Group 5.png" alt="" />
+      </div>
+      <div class="btn">
+        <a href="/Signup.html"><button>Create account</button></a>
+      </div>
+    </div>
+    <div class="section1">
+      <div class="car">
+        <img src="/Group 4038.png" alt="" />
+      </div>
+      <div class="form">
+        <div class="head">
+          Login your account on <span style="color: #cb1c1f">Gas</span>App.
+        </div>
+        <input type="email" placeholder="Email" id="mail" required />
+        <div class="section2">  <input type="password" placeholder="Password" id="paswrd" required />
+          <span
+            class="toggle-password"
+            onclick="togglePasswordVisibility()"
+          ></span>
+  </div>
+      
+        <!-- Include Font Awesome -->
+
+        <button class="button">Login</button>
+        <div class="frgtp">Forgot Password?</div>
+      </div>
+    </div>
+    <script>
+      let isPasswordVisible = false; // Check flag (0 = hidden, 1 = visible)
+
+      function togglePasswordVisibility() {
+        const passwordInput = document.getElementById("paswrd");
+        const eyeIcon = document.querySelector(".toggle-password");
+
+        if (isPasswordVisible) {
+          // Hide the password and switch to the 'eye' icon
+          passwordInput.type = "text";
+          eyeIcon.style.backgroundImage = "url('/eye.png')"; // Show 'eye' icon
+          eyeIcon.style.backgroundSize = "18px 15px";
+        } else {
+          // Show the password and switch to the 'eye-slash' icon
+          passwordInput.type = "password";
+          eyeIcon.style.backgroundImage = "url('/danger.png')"; // Show 'eye-slash' icon
+        }
+
+        // Toggle the visibility flag
+        isPasswordVisible = !isPasswordVisible;
+      }
+    </script>
+  </body>
+</html>
